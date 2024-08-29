@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLORS</title>
+    <link rel="icon" href="r.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        border: 0;
+    }
+
+    .head {
+        display: flex;
+
+        background-color: #c25993;
+    }
+
+    .head h2 {
+        color: white;
+        padding: 15px;
+
+    }
+
+    .photo {
+        border: 2px solid palevioletred;
+        border-radius: 5px;
+        margin-left: 20px;
+    }
+
+    .product-container {
+        margin-top: 20px;
+    }
+
+    .search-box {
+        width: 80%;
+        border: solid palevioletred 2px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin: auto
+    }
+
+    .search-box input {
+        border: none;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .search-box input:focus {
+        outline: none;
+    }
+
+    .products {
+        display: flex;
+        padding: 20px;
+        gap: 40px;
+        flex-wrap: wrap;
+
+
+
+    }
+
+    .product {
+        text-align: center;
+        flex-basis: 20%;
+        flex-grow: 1;
+    }
+
+
+</style>
+
+<body>
+
+    <div class="head">
+        <img src="r.jpg" width="50px" height="50px" class="photo">
+        <h2>COLORS</h2>
+    </div>
+    <div class="product-container">
+        <form class="search-box">
+            <input type="text" id="p-search" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <div class="products" id="products">
+            <div class="product">
+                <img src="crops.jfif" width="200px" height="200px">
+                <p>Tshirts</p>
+            </div>
+            <div class="product">
+                <img src="download.jfif" width="200px" height="200px">
+                <p>crops</p>
+            </div>
+            <div class="product">
+                <img src="eight.jfif" width="200px" height="200px">
+                <p>Lamp</p>
+            </div>
+            <div class="product">
+                <img src="one.jfif" width="200px" height="200px">
+                <p>Home Decor</p>
+            </div>
+            <div class="product">
+                <img src="five.jfif" width="200px" height="200px">
+                <p>Men Tshirts</p>
+            </div>
+            <div class="product">
+                <img src="four.jfif" width="200px" height="200px">
+                <p>Men Shirts</p>
+            </div>
+            <div class="product">
+                <img src="full.jfif" width="200px" height="200px">
+                <p>crop Top</p>
+            </div>
+            <div class="product">
+                <img src="jewel.jfif" width="200px" height="200px">
+                <p>Jewel</p>
+            </div>
+            <div class="product">
+                <img src="jewel1.jfif" width="200px" height="200px">
+                <p>Necklace</p>
+            </div>
+            <div class="product">
+                <img src="seven.jfif" width="200px" height="200px">
+                <p>Chudithar</p>
+            </div>
+            <div class="product">
+                <img src="six.jfif" width="200px" height="200px">
+                <p>Duppata Sets</p>
+            </div>
+            <div class="product">
+                <img src="saree1.jfif" width="200px" height="200px">
+                <p>Saree</p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        var product = document.querySelector(".products")
+        var search = document.getElementById("p-search")
+        var productlist = product.querySelectorAll("div")
+
+        search.addEventListener("keyup", function () {
+            var entered = event.target.value.toUpperCase()
+            for (var i = 0; i < productlist.length; i++) {
+                if (productlist[i].textContent.toUpperCase().indexOf(entered) < 0) {
+                    productlist[i].style.display = "none"
+                }
+                else {
+                    productlist[i].style.display = "block"
+                }
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

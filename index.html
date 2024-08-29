@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLORS</title>
+    <link rel="icon" href="r.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        border: 0;
+    }
+
+    body {
+        background-image: url(backe.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+
+
+    .head {
+        display: flex;
+
+        background-color: #c25993;
+    }
+
+    .head h2 {
+        color: white;
+        padding: 15px;
+
+    }
+
+    .photo {
+        border: 2px solid palevioletred;
+        border-radius: 5px;
+        margin-left: 20px;
+    }
+
+    .profile {
+        background-color: #c25993;
+        margin-left: 100px;
+        height: 300px;
+        width: 30%;
+        border: 2px solid palevioletred;
+        margin-top: 20px;
+        border-radius: 10px;
+
+    }
+
+    label {
+        padding: 15px;
+        margin: 20px;
+        color: white;
+        font-size: large;
+
+    }
+
+    .profile input {
+        margin: 20px;
+        width: 40%;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .sign {
+        padding: 10px;
+        background-color: white;
+        color: black;
+        border: 2px solid palevioletred;
+        border-radius: 10px;
+        width: 100px;
+        margin: 20px;
+        margin-left: 150px;
+        font-size: medium;
+    }
+
+    .sign:hover {
+        background-color: palevioletred;
+        color: white;
+    }
+
+    .footer {
+        background-color: #c25993;
+        padding: 10px;
+        display: flex;
+        margin-top: 200px;
+
+    }
+
+    .footer h4 {
+        padding: 3px;
+        margin-top: 10px;
+        color: white;
+    }
+
+    @media screen and (max-width:600px) {
+        * {
+            margin: 0;
+            border: 0;
+        }
+
+        body {
+            background-image:url(backe.jpg);
+            background-repeat: no-repeat;
+            background-size: 110% 100%;
+        }
+
+        .head {
+            display: flex;
+            background-color: #c25993;
+        }
+
+        .head h2 {
+            color: white;
+            padding: 15px;
+
+        }
+
+        .photo {
+            border: 2px solid palevioletred;
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+
+        .profile {
+            background-color:#c25993;
+           margin-top: 100px;
+           margin-left: 0px;
+            height: 250px;
+            width: 60%;
+            border: 2px solid palevioletred;
+            border-radius: 10px;
+
+        }
+
+        label {
+             padding: 0px;
+             margin: 0px;
+             
+            margin-left: 70px;
+            color: white;
+            font-size: large;
+
+        }
+
+        .profile input {
+            margin: 10px;
+            padding: 10px;
+            margin-left: 70px;
+            width: 48%;
+
+            border-radius: 5px;
+        }
+
+        .sign {
+            width: 54%;
+            margin-left: 70px;
+            font-size: medium;
+        }
+
+
+    }
+</style>
+
+<body>
+
+
+    <div class="head">
+        <img src="r.jpg" width="50px" height="50px" class="photo">
+        <h2>COLORS</h2>
+    </div>
+
+
+    <div class="profile" name="myprofile">
+        <label class="labels">Username</label>
+        <input type="text" placeholder="Username" id="username"><br>
+        <label class="labels">Password</label>
+        <input type="text" placeholder="Password" id="password"><br>
+
+        <button class="sign" onclick="fun()" style="text-decoration: none;">Sign-In</button>
+
+
+    </div>
+    <div class="footer">
+        <h4>Copyrights&nbsp;<i class="fa-solid fa-copyright"></i>&nbsp;2020.All Rights Reserved</h4>
+        <div class="media">
+            <h4>Connect</h4>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+
+        </div>
+    </div>
+    <script>
+        function fun() {
+            var name = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (name == null || name == "") {
+                alert("Username must be entered");
+                return false;
+            }
+            else if (password == null || password == "") {
+                alert("Password must be entered");
+                return false;
+            }
+
+            else {
+                location.href = 'home.html';
+            }
+        }
+    </script>
+</body>
+
+</html>
